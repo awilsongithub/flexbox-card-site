@@ -17,7 +17,16 @@
 			display: -webkit-flex; /* all webkit user agents */
 			display: -ms-flexbox; /* ie 10 */
 			display: flex; /* unprefixed */
+			-webkit-flex-direction: row; /* row is default */
+			-ms-flex-direction: row;
 			flex-direction: row;
+			flex-wrap: row;
+			width: 600px;
+			/* wrap prevents overflow and wraps like word wrap */
+			-webkit-flex-wrap: wrap;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+
 		}
 	</style>
 </head>
@@ -28,7 +37,7 @@
 	</header>
 	<article>
 		<h2>Defining flex containers</h2>
-		<p>To use Flexbox, you set a parent container's <strong>display</strong> property to <code>display: flex</code>. This will make all direction children of the parent element <strong>flex items</strong> that can be controlled through flex properties. To set the main axis for flex items, use the <strong>flex-direction</strong> property. To enable multi-line flex containers, use the <strong>flex-wrap</strong> property. To declare both, use the <strong>flex-flow</strong> shorthand.</p>
+		<p>To use Flexbox, you set a parent container's <strong>display</strong> property to <code>display: flex</code>. This will make all direction children of the parent element <strong>flex items</strong> that can be controlled through flex properties. To set the main axis for flex items, use the <code>flex-direction (row or column)</code> property. To enable multi-line flex containers, use the <code>flex-wrap</code> property. To declare both, use the <strong>flex-flow</strong> shorthand.</p>
 		<section class="flex-container">
 			<div class="box">
 			<h3>one</h3>
@@ -41,6 +50,15 @@
 			</div>
 			<div class="box">
 			<h3>four</h3>
+			</div>
+			<div class="box">
+			<h3>five</h3>
+			</div>
+			<div class="box">
+			<h3>six</h3>
+			</div>
+			<div class="box">
+			<h3>seven</h3>
 			</div>
 		</section>
 	</article>
