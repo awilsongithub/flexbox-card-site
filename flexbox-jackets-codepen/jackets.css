@@ -129,10 +129,12 @@ h6 {
     /* could combine to flex: 1 16%; */
 }
 .p-image img {
-    width: 100%;
+    max-width: 100%;
 }
 .p-info {
-
+    margin-top: auto; /* consistent vert alignment at bottom of cards */
+    text-align: center;
+    padding-top: .5em;
 }
 
 
@@ -202,38 +204,29 @@ label {
 }
 
 @media ( max-width: 920px ) {
-
-	.product-card {
+	.p-card {
 		flex: 1 21%;
 	}
-
-	.products .product-card:first-child,
-	.products .product-card:nth-child(2) {
-		flex: 2 46%;
-	}
-
+    .p .p-card:first-child,
+    .p .p-card:nth-child(2) {
+        flex: 2 46%;
+    }
 }
 
 @media ( max-width: 600px ) {
-
-	.product-card {
+	.p-card {
 		flex: 1 46%;
 	}
-
 }
 
 @media ( max-width: 480px ) {
-
 	h1 {
 		margin-bottom: 20px;
 	}
-
 	.product-filter {
 		flex-direction: column;
 	}
-
 	.sort {
 		align-self: flex-start;
 	}
-
 }
